@@ -62,8 +62,6 @@
         <div style="padding: auto;margin: auto; width:30%; text-align:center">
             <img id="dispImg" alt="Your Image will render here" style="width: 100%">
         </div>
-        
-
         <c:import url="Footer.jsp"></c:import>
     </body>
 </html>

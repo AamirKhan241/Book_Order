@@ -55,5 +55,14 @@ create table profit (Transaction_No int primary key, sale_by int references prof
 Profit_Amount varchar(10),transaction_date date default sysdate);
 
 
+create table userquery (serial_no int primary key, name varchar(30), email varchar(50), subject varchar(50), message varchar(500), reply varchar(500) default ‘none’  );
+
+
+create table purchase_report (purchase_note_no int primary key, amount_to_pay varchar (10), book_isbn varchar(13),	copies varchar (5), price varchar(5), 
+amount_paid varchar(10), balance varchar(10), supplier_id int references profiles(user_id));
+
+
+create table purchase (purchase_id int primary key, purchase_note_no int references purchase_report(purchase_note_no), supplier_id int references profiles(user_id), 
+amount varchar(10), purchase_date date default sysdate);
     */
 }
